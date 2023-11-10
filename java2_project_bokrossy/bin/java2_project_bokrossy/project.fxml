@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java2_project_bokrossy.EmployeeController">
+   <children>
+      <TextField fx:id="idField" layoutX="568.0" layoutY="71.0" prefHeight="25.0" prefWidth="183.0" />
+      <TextField fx:id="nameField" layoutX="567.0" layoutY="117.0" prefHeight="25.0" prefWidth="183.0" />
+      <ComboBox fx:id="jobTitleComboBox" layoutX="568.0" layoutY="163.0" prefHeight="25.0" prefWidth="183.0">
+    
+    </ComboBox>
+      <RadioButton fx:id="femaleRadioButton" layoutX="563.0" layoutY="220.0" mnemonicParsing="false" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="otherRadioButton" layoutX="697.0" layoutY="220.0" mnemonicParsing="false" text="Other" toggleGroup="$genderGroup" />
+      <RadioButton fx:id="maleRadioButton" layoutX="635.0" layoutY="220.0" mnemonicParsing="false" text="Male" toggleGroup="$genderGroup" />
+      <CheckBox fx:id="fullTimeCheckBox" layoutX="563.0" layoutY="264.0" mnemonicParsing="false" />
+      <Button fx:id="addButton" layoutX="706.0" layoutY="311.0" mnemonicParsing="false" onAction="#HandleAdd" text="Add" />
+      <Button fx:id="clearButton" layoutX="642.0" layoutY="311.0" mnemonicParsing="false" onAction="#HandleClear" text="Clear" />
+      <Button fx:id="deleteButton" layoutX="698.0" layoutY="410.0" mnemonicParsing="false" onAction="#HandleDelete" text="Delete" />
+      <ScrollPane fx:id="scroll" layoutX="57.0" layoutY="47.0" prefHeight="325.0" prefWidth="348.0">
+         <content>
+            <ListView fx:id="listv" prefHeight="323.0" prefWidth="330.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="idLabel" layoutX="486.0" layoutY="75.0" text="ID" />
+      <Label fx:id="nameLabel" layoutX="482.0" layoutY="121.0" text="Name" />
+      <Label fx:id="titleLabel" layoutX="486.0" layoutY="19.0" prefHeight="25.0" prefWidth="179.0" text="Add New Employee">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="genderLabel" layoutX="483.0" layoutY="220.0" text="Gender" />
+      <Label fx:id="jobTitleLabel" layoutX="483.0" layoutY="168.0" text="Job Title" />
+      <Label fx:id="deleteLabel" layoutX="479.0" layoutY="377.0" text="Delete Existing Employee">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="deleteText" layoutX="477.0" layoutY="416.0" text="Select employee and click 'Delete'" />
+      <Label fx:id="employeeCountLabel" layoutX="57.0" layoutY="378.0" text="Total Employees:" />
+      <Label fx:id="listLabel" layoutX="57.0" layoutY="18.0" text="Employee List">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="saveButton" layoutX="363.0" layoutY="379.0" mnemonicParsing="false" onAction="#HandleSave" text="Save" />
+      <Label layoutX="480.0" layoutY="263.0" text="Full Time" />
+   </children>
+</AnchorPane>
